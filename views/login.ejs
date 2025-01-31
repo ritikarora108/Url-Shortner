@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Login</h1>
+    
+    <% if (locals.error) { %>
+        <p><%= locals.error %></p>
+    <% } %>
+
+    <form action=""></form>
+
+    <form method="POST" action="/user/login">
+        <label>Email</label>
+        <input type="text" required name="email" placeholder="abc@gmail.com">
+        <label>Password</label>
+        <input type="password" required name="password" placeholder="*********">
+        <button type="submit">Login</button>
+    </form>
+
+    <h3>New user? <a href="/signup">Sign up here</a></h3> <!-- Link to Signup Page -->
+</body>
+
+</html>
